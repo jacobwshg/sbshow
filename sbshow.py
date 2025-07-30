@@ -1,10 +1,10 @@
 from sys import argv
 
-# show bytes in character
+# show character as hex
 def cbshow(c):
     return f'{c}\t{hex(ord(c))}'
 
-# show bytes in string
+# show string as hex
 def sbshow(s):
     return '\n'.join([cbshow(c) for c in s])
 
