@@ -8,6 +8,7 @@ def cbshow(c):
 def sbshow(s):
     return '\n'.join([cbshow(c) for c in s])
 
+# forgot this is Python
 def main():
     for s in argv[1:]:
         print(f'{sbshow(s)}\n')
