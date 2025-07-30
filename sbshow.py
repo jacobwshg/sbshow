@@ -8,8 +8,13 @@ def cbshow(c):
 def sbshow(s):
     return '\n'.join([cbshow(c) for c in s])
 
+USAGE = 'Usage: sbshow.py <str1> (<str2> ...)'
+
 # forgot this is Python
 def main():
+    if len(argv) <= 1:
+        print(USAGE)
+        exit()
     for s in argv[1:]:
         print(f'{sbshow(s)}\n')
     exit()
