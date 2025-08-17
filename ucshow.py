@@ -1,14 +1,14 @@
 from sys import argv
 
-# show character as hex
-def cbshow(c):
+# show character codepoint
+def uc_showc(c):
     return f'{c}\t{hex(ord(c))}'
 
-# show string as hex
-def sbshow(s):
-    return '\n'.join([cbshow(c) for c in s])
+# show string codepoints
+def uc_shows(s):
+    return '\n'.join([uc_showc(c) for c in s])
 
-USAGE = 'Usage: sbshow.py <str1> (<str2> ...)'
+USAGE = 'Usage: ucshow.py <str1> (<str2> ...)'
 
 # forgot this is Python
 def main():
@@ -16,7 +16,7 @@ def main():
         print(USAGE)
         exit()
     for s in argv[1:]:
-        print(f'{sbshow(s)}\n')
+        print(f'{uc_shows(s)}\n')
     exit()
 
 if __name__ == '__main__':
